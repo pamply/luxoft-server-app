@@ -44,15 +44,6 @@ const schema = buildSchema(`
 
 const app = express();
 app.use(cors());
-
-// app.use("/graphql", function (req, res, next) { 
-//   res.header('Access-Control-Allow-Origin', '*');
-//   res.header('Accept', 'application/json');
-//   res.header('Content-Type', 'application/json');
-//   res.header('Access-Control-Allow-Methods', 'OPTIONS, GET, HEAD, POST');
-//   next();
-// });
-
 app.use('/graphql', graphqlHTTP({
     schema: schema,
     rootValue: root,
