@@ -30,7 +30,7 @@ const schema = buildSchema(`
     password: String!
     preferences: [Preferences!]
     age: Int!
-    gender: [Gender]!
+    gender: Gender!
   }
 
   type Query {
